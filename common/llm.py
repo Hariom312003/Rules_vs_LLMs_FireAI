@@ -85,6 +85,14 @@ class LLMClient:
 
             key = os.getenv("GEMINI_API_KEY")
             if not key:
+                try:
+                    import streamlit as st
+                    if hasattr(st, "secrets") and "GEMINI_API_KEY" in st.secrets:
+                        key = str(st.secrets["GEMINI_API_KEY"]).strip()
+                        os.environ["GEMINI_API_KEY"] = key
+                except Exception:
+                    pass
+            if not key:
                 raise RuntimeError("GEMINI_API_KEY is not set (see .env.example)")
             self._client = genai.Client(api_key=key)
         return self._client
@@ -126,9 +134,11 @@ class LLMClient:
             max_output_tokens=max_tokens,
         )
 
-        @retry(stop=stop_after_attempt(5), wait=wait_exponential(min=2, max=60))
+        client = self._get_client()
+
+        @retry(stop=stop_after_attempt(3), wait=wait_exponential(min=1, max=10), reraise=True)
         def _call():
-            return self._get_client().models.generate_content(
+            return client.models.generate_content(
                 model=self.model, contents=prompt, config=cfg
             )
 

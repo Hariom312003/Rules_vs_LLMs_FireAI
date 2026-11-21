@@ -14,6 +14,15 @@ import pandas as pd
 import requests
 import streamlit as st
 
+# Expose Streamlit secrets to os.environ so all submodules (common.llm, etc.) have access
+try:
+    if hasattr(st, "secrets"):
+        for k, v in st.secrets.items():
+            if isinstance(v, (str, int, float, bool)) and k not in os.environ:
+                os.environ[k] = str(v)
+except Exception:
+    pass
+
 # Setup paths
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
@@ -173,11 +182,36 @@ with tabs[0]:
                 except Exception as e:
                     st.warning(f"Backend call failed: {e}. Falling back to direct engine.")
             if res is None:
-                res = answer(user_query, mode=mode_choice, fy=fy_choice, calculator=calc)
-            
-            elapsed = time.perf_counter() - t0
-            st.session_state["last_res"] = res
-            st.session_state["last_latency"] = elapsed
+                try:
+                    res = answer(user_query, mode=mode_choice, fy=fy_choice, calculator=calc)
+                except Exception as exc:
+                    err_str = str(exc)
+                    st.session_state.pop("last_res", None)
+                    if "GEMINI_API_KEY" in err_str:
+                        st.error(
+                            "🔑 **Google Gemini API Key is not set in Streamlit Cloud Secrets!**\n\n"
+                            "Since the Render backend is offline/unreachable, this app is running in **Direct In-Process Engine Mode**.\n\n"
+                            "### Quick Fix 1 (Add Key in 30 seconds):\n"
+                            "1. Click **'Manage app'** at the bottom-right corner of this screen.\n"
+                            "2. Click the three dots **⋮** ➔ **Settings** ➔ **Secrets**.\n"
+                            "3. Paste your Gemini API key:\n"
+                            "```toml\n"
+                            'GEMINI_API_KEY = "your_actual_gemini_api_key_here"\n'
+                            "```\n"
+                            "4. Click **Save**.\n\n"
+                            "---\n"
+                            "⚡ **Quick Fix 2 (No Key Needed):**\n"
+                            "Select **'Regex Baseline (No LLM)'** under **Extractor Model** above, then click **Calculate My Tax**! "
+                            "It runs 100% locally with zero external APIs and tests the exact deterministic rules engine."
+                        )
+                    else:
+                        st.error(f"⚠️ Calculation error: {err_str}")
+                    res = None
+
+            if res is not None:
+                elapsed = time.perf_counter() - t0
+                st.session_state["last_res"] = res
+                st.session_state["last_latency"] = elapsed
 
     if "last_res" in st.session_state:
         res = st.session_state["last_res"]
