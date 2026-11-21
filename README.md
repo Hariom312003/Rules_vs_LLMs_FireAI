@@ -5,6 +5,16 @@
 
 ---
 
+## 🌐 Live Cloud Deployment (One-Click Evaluation)
+
+- 🚀 **Interactive Streamlit Web App:** [https://rulesvsllmsfireai-gqprhxfz4xvxyavqdmwryz.streamlit.app/](https://rulesvsllmsfireai-gqprhxfz4xvxyavqdmwryz.streamlit.app/)
+- ⚡ **Production Hosted FastAPI Backend:** [https://rules-vs-llms-fireai.onrender.com/docs](https://rules-vs-llms-fireai.onrender.com/docs)
+- 📦 **GitHub Repository:** [https://github.com/Hariom312003/Rules_vs_LLMs_FireAI](https://github.com/Hariom312003/Rules_vs_LLMs_FireAI)
+
+> **Evaluator Note:** The public Streamlit application is live and fully connected to the hosted FastAPI backend on Render with Google Gemini 3.5 Flash and rupee-exact deterministic calculation. You can test natural language queries in English, Hinglish, or Hindi directly in your browser without local installation.
+
+---
+
 ## 1. Quickstart & Installation Instructions
 
 ### Prerequisites

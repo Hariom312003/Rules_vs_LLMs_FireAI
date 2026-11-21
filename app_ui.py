@@ -35,7 +35,7 @@ from project_a.tax_engine.models import TaxpayerInput
 from project_b.detectors.rules import RuleDetectors
 
 def get_default_api_base() -> str:
-    """Retrieve API base URL from Streamlit secrets, environment variables, or local default."""
+    """Retrieve API base URL from Streamlit secrets, environment variables, or hosted default."""
     try:
         if hasattr(st, "secrets") and "API_BASE_URL" in st.secrets:
             return str(st.secrets["API_BASE_URL"]).rstrip("/")
@@ -44,7 +44,7 @@ def get_default_api_base() -> str:
     env_val = os.getenv("API_BASE_URL")
     if env_val:
         return env_val.rstrip("/")
-    return "http://127.0.0.1:8000"
+    return "https://rules-vs-llms-fireai.onrender.com"
 
 st.set_page_config(
     page_title="Rules vs LLMs | Fire AI",
@@ -82,6 +82,14 @@ st.markdown("""
         font-size: 1rem;
         display: inline-block;
         margin-bottom: 12px;
+    }
+    [data-testid="stMetricValue"] {
+        font-size: 1.35rem !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+    }
+    [data-testid="stMetricLabel"] {
+        font-size: 0.85rem !important;
     }
 </style>
 """, unsafe_allow_html=True)
