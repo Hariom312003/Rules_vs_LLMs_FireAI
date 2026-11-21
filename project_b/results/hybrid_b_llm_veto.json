@@ -1,0 +1,117 @@
+{
+  "rows_processed": 26200,
+  "rows_per_s": 44,
+  "compute_usd_per_m_rows": 0.2518,
+  "llm_usd_per_m_rows": 0.0,
+  "llm_enabled": true,
+  "per_problem": [
+    {
+      "problem": "a",
+      "name": "Renamed or dropped column",
+      "owner": "rules",
+      "detection": 1.0,
+      "fa_row_rate_clean": 0.0,
+      "llm_rows": 45,
+      "suppressed_by_llm": 4
+    },
+    {
+      "problem": "b",
+      "name": "Column type change",
+      "owner": "rules",
+      "detection": 1.0,
+      "fa_row_rate_clean": 0.0,
+      "llm_rows": 88,
+      "suppressed_by_llm": 46
+    },
+    {
+      "problem": "c",
+      "name": "Date format switch partway through batch",
+      "owner": "rules",
+      "detection": 1.0,
+      "fa_row_rate_clean": 0.0,
+      "llm_rows": 97,
+      "suppressed_by_llm": 53
+    },
+    {
+      "problem": "d",
+      "name": "Latitude/longitude swapped",
+      "owner": "rules",
+      "detection": 1.0,
+      "fa_row_rate_clean": 0.0,
+      "llm_rows": 115,
+      "suppressed_by_llm": 69
+    },
+    {
+      "problem": "e",
+      "name": "Exact duplicates",
+      "owner": "rules",
+      "detection": 1.0,
+      "fa_row_rate_clean": 0.0,
+      "llm_rows": 94,
+      "suppressed_by_llm": 52
+    },
+    {
+      "problem": "f",
+      "name": "Near-duplicates",
+      "owner": "stats",
+      "detection": 0.81,
+      "fa_row_rate_clean": 0.0005,
+      "llm_rows": 83,
+      "suppressed_by_llm": 40
+    },
+    {
+      "problem": "g",
+      "name": "Null spike in one agency's records",
+      "owner": "stats",
+      "detection": 1.0,
+      "fa_row_rate_clean": 0.0,
+      "llm_rows": 100,
+      "suppressed_by_llm": 47
+    },
+    {
+      "problem": "h",
+      "name": "Closed date earlier than created date",
+      "owner": "rules",
+      "detection": 1.0,
+      "fa_row_rate_clean": 0.0,
+      "llm_rows": 98,
+      "suppressed_by_llm": 55
+    },
+    {
+      "problem": "i",
+      "name": "ZIP inconsistent with borough",
+      "owner": "rules",
+      "detection": 1.0,
+      "fa_row_rate_clean": 0.0,
+      "llm_rows": 100,
+      "suppressed_by_llm": 56
+    },
+    {
+      "problem": "j",
+      "name": "Complaint Type inconsistent with Descriptor",
+      "owner": "stats",
+      "detection": 0.08,
+      "fa_row_rate_clean": 0.0,
+      "llm_rows": 150,
+      "suppressed_by_llm": 146
+    },
+    {
+      "problem": "k",
+      "name": "Resolution Description contradicting Status",
+      "owner": "rules",
+      "detection": 0.09,
+      "fa_row_rate_clean": 0.0,
+      "llm_rows": 150,
+      "suppressed_by_llm": 144
+    },
+    {
+      "problem": "l",
+      "name": "Personal data in free-text fields",
+      "owner": "rules",
+      "detection": 1.0,
+      "fa_row_rate_clean": 0.005,
+      "llm_rows": 90,
+      "suppressed_by_llm": 49
+    }
+  ]
+}

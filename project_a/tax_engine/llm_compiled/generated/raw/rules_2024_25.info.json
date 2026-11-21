@@ -1,0 +1,9 @@
+{
+  "fy": "2024-25",
+  "seconds": 104.9,
+  "raw_path": "generated/raw/rules_2024_25.raw.py",
+  "run_path": "generated/rules_2024_25.py",
+  "tokens_in": 2527,
+  "tokens_out": 4280,
+  "model": "Qwen3.5-9B"
+}

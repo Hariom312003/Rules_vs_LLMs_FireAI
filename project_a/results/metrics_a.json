@@ -1,0 +1,196 @@
+{
+  "fy": "2024-25",
+  "hand_rules": {
+    "n_cases": 256,
+    "regime_exact": 1.0,
+    "case_exact": 1.0,
+    "loud_errors": 0,
+    "error_types": {},
+    "silent_wrong": 0,
+    "latency_p50_s": 0.00010222499997780687,
+    "latency_p95_s": 0.00016050599992922798,
+    "traceability": 1.0,
+    "by_category": {
+      "all_ded": "2/2",
+      "anchor": "7/7",
+      "c80": "5/5",
+      "c80ccd": "3/3",
+      "d80_par": "4/4",
+      "d80_self": "3/3",
+      "d80_self_sr": "3/3",
+      "extreme": "11/11",
+      "hl": "3/3",
+      "hra": "8/8",
+      "new_edge": "35/35",
+      "old_edge": "56/56",
+      "rand": "60/60",
+      "surch_new": "28/28",
+      "surch_old": "28/28"
+    },
+    "wrong_ids": [],
+    "cost_per_1000_usd": 1.3978723090464958e-06,
+    "determinism": {
+      "inputs": 30,
+      "repeats": 10,
+      "max_distinct_totals": 1,
+      "max_distinct_full_outputs": 1,
+      "deterministic": true
+    }
+  },
+  "llm_compiled": {
+    "n_cases": 256,
+    "regime_exact": 1.0,
+    "case_exact": 1.0,
+    "loud_errors": 0,
+    "error_types": {},
+    "silent_wrong": 0,
+    "latency_p50_s": 0.0001462989999936326,
+    "latency_p95_s": 0.00020592300006683217,
+    "traceability": 1.0,
+    "by_category": {
+      "all_ded": "2/2",
+      "anchor": "7/7",
+      "c80": "5/5",
+      "c80ccd": "3/3",
+      "d80_par": "4/4",
+      "d80_self": "3/3",
+      "d80_self_sr": "3/3",
+      "extreme": "11/11",
+      "hl": "3/3",
+      "hra": "8/8",
+      "new_edge": "35/35",
+      "old_edge": "56/56",
+      "rand": "60/60",
+      "surch_new": "28/28",
+      "surch_old": "28/28"
+    },
+    "wrong_ids": [],
+    "cost_per_1000_usd": 1.7661730034824864e-06,
+    "determinism": {
+      "inputs": 30,
+      "repeats": 10,
+      "max_distinct_totals": 1,
+      "max_distinct_full_outputs": 1,
+      "deterministic": true
+    }
+  },
+  "parser_regex": {
+    "n": 50,
+    "extraction_exact": 0.25,
+    "n_should_extract": 28,
+    "asked_when_not_needed": 19,
+    "n_should_ask": 22,
+    "asked_correctly": 20,
+    "guessed_instead_of_asking": 2,
+    "question_on_right_topic": 19,
+    "invented_fields": 0,
+    "guessed_ids": [
+      "d38->{\"age\": 34, \"gross_salary\": 1900000}",
+      "d48->{\"age\": 55, \"gross_salary\": 1400000, \"sec_80c\": 200000}"
+    ],
+    "asked_unnecessarily_ids": [
+      "d02:gross_salary",
+      "d05:rent_paid",
+      "d06:age,sec_80d_self",
+      "d07:age,gross_salary,sec_80d_parents,parents_senior",
+      "d08:age",
+      "d09:sec_80d_parents,parents_senior",
+      "d10:gross_salary",
+      "d11:rent_paid",
+      "d14:rent_paid",
+      "d15:age,sec_80d_self",
+      "d18:basic_salary,hra_received,rent_paid,metro_city",
+      "d19:age,sec_80d_parents,parents_senior",
+      "d21:age,gross_salary",
+      "d22:gross_salary,sec_80d_self",
+      "d23:gross_salary",
+      "d25:age,gross_salary",
+      "d26:gross_salary",
+      "d27:gross_salary",
+      "d28:rent_paid"
+    ],
+    "wrong_extraction_ids": [
+      "d04",
+      "d16"
+    ],
+    "exceptions": 0,
+    "latency_p50_s": 7.265100009590242e-05,
+    "latency_p95_s": 0.00018910899996171793
+  },
+  "llm_query": {
+    "n_cases": 12,
+    "regime_exact": 0.25,
+    "case_exact": 0.25,
+    "loud_errors": 0,
+    "error_types": {},
+    "silent_wrong": 9,
+    "latency_p50_s": 20.019841799978167,
+    "latency_p95_s": 27.820795799954794,
+    "traceability": 0.5456349206349206,
+    "by_category": {
+      "anchor": "0/1",
+      "d80_par": "0/1",
+      "extreme": "0/1",
+      "new_edge": "0/1",
+      "old_edge": "3/3",
+      "rand": "0/2",
+      "surch_new": "0/2",
+      "surch_old": "0/1"
+    },
+    "wrong_ids": [
+      "anchor_new_at_87a_limit",
+      "new_edge_1000000_-10",
+      "surch_new_5000000_+10",
+      "surch_new_20000000_-1",
+      "surch_old_50000000_+10",
+      "d80_par_50000_1",
+      "extreme_60000000",
+      "rand_017",
+      "rand_038"
+    ],
+    "cost_per_1000_usd": 0.5434749999999999,
+    "tokens_per_request": 3121.0,
+    "model": "Qwen3.5-9B",
+    "determinism": {
+      "inputs": 2,
+      "repeats": 10,
+      "max_distinct_totals": 1,
+      "max_distinct_full_outputs": 1,
+      "deterministic": true
+    },
+    "carried_over_from_earlier_run": true
+  },
+  "parser_llm": {
+    "n": 50,
+    "extraction_exact": 0.8928571428571429,
+    "n_should_extract": 28,
+    "asked_when_not_needed": 2,
+    "n_should_ask": 22,
+    "asked_correctly": 19,
+    "guessed_instead_of_asking": 3,
+    "question_on_right_topic": 19,
+    "invented_fields": 0,
+    "guessed_ids": [
+      "d39->{\"age\": 38, \"gross_salary\": 1500000}",
+      "d46->{\"age\": 36, \"gross_salary\": 1200000}",
+      "d48->{\"age\": 55, \"gross_salary\": 1400000, \"sec_80c\": 200000}"
+    ],
+    "asked_unnecessarily_ids": [
+      "d26:gross_salary",
+      "d27:sec_80d_self"
+    ],
+    "wrong_extraction_ids": [
+      "d15"
+    ],
+    "exceptions": 0,
+    "latency_p50_s": 0.00011439993977546692,
+    "latency_p95_s": 0.0006636999314650893,
+    "cost_per_1000_usd": 0.0,
+    "model": "Qwen3.5-9B",
+    "latency_p50_s_uncached": 4.924,
+    "latency_p95_s_uncached": 5.403,
+    "cost_per_1000_usd_uncached": 0.131,
+    "note": "accuracy re-scored from cached model answers after rule changes; latency and cost are from the preceding uncached run (50 live calls, Qwen3.5-9B local)",
+    "carried_over_from_earlier_run": true
+  }
+}

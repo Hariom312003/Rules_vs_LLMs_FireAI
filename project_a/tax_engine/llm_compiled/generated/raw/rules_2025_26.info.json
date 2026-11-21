@@ -1,0 +1,9 @@
+{
+  "fy": "2025-26",
+  "seconds": 142.1,
+  "raw_path": "E:\\harrytask\\project_a\\tax_engine\\llm_compiled\\generated\\raw\\rules_2025_26.raw.py",
+  "run_path": "E:\\harrytask\\project_a\\tax_engine\\llm_compiled\\generated\\rules_2025_26.py",
+  "tokens_in": 2467,
+  "tokens_out": 5699,
+  "model": "Qwen3.5-9B"
+}

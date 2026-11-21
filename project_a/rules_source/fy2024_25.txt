@@ -1,0 +1,63 @@
+INCOME-TAX RULES FOR A SALARIED RESIDENT INDIVIDUAL
+FINANCIAL YEAR 2024-25 (ASSESSMENT YEAR 2025-26), AS AMENDED BY THE FINANCE ACT 2024
+Scope: salary income only. Resident individual. All amounts in rupees (INR), annual.
+Verification status of each clause is recorded in SOURCES.md (V = verified on an official page, S = statutory text not fetched).
+
+[R1] STANDARD DEDUCTION  (Sec 16(ia); new regime: Sec 115BAC(1A)(ii))   [V]
+  Old regime: deduction is the lower of Rs 50,000 and the salary.
+  New regime: deduction is the lower of Rs 75,000 and the salary.
+
+[R2] HOUSE RENT ALLOWANCE EXEMPTION  (Sec 10(13A) read with Rule 2A)   [S]
+  Old regime only. Exempt amount is the LEAST of:
+    (a) HRA actually received;
+    (b) 50% of salary if the taxpayer lives in Delhi, Mumbai, Kolkata or Chennai, otherwise 40% of salary;
+    (c) rent paid minus 10% of salary.
+  "Salary" for this rule means basic salary (plus dearness allowance that forms part of pay).
+  If no rent is paid or no HRA is received, the exemption is nil. The exemption is never negative.
+
+[R3] SECTION 80C   [V]  Old regime only. Deduction up to Rs 1,50,000 (combined limit with 80CCC and 80CCD(1)).
+[R4] SECTION 80CCD(1B)   [V]  Old regime only. Additional deduction for NPS up to Rs 50,000.
+[R5] SECTION 80D (health insurance)   [V]  Old regime only. Two separate limits, added together:
+  (a) self, spouse and children: up to Rs 25,000, or Rs 50,000 if the taxpayer is a senior citizen (age 60 or more);
+  (b) parents: up to Rs 25,000, or Rs 50,000 if a parent is a senior citizen.
+  Each limit applies to the premium actually paid for that group.
+[R6] SECTION 24(b)  [V]  Old regime only. Interest on a housing loan for a SELF-OCCUPIED house is allowed up to Rs 2,00,000.
+  It is a loss under the head "income from house property" and is set off against salary income.
+[R7] NEW REGIME RESTRICTION   [V]  Under the new regime (Sec 115BAC) none of R2, R3, R4, R5, R6 is allowed. Only the standard deduction R1 applies.
+
+[R8] TOTAL INCOME
+  Total income = salary - standard deduction - HRA exemption - house-property loss - Chapter VI-A deductions (R3 to R5).
+  Chapter VI-A deductions cannot exceed gross total income. Total income is never below zero.
+
+[R9] ROUNDING OF INCOME  (Sec 288A)   [V]
+  Total income is rounded to the nearest multiple of Rs 10. If the last digit is 5 or more it is rounded UP to the next multiple of 10; otherwise it is rounded DOWN.
+  All tax below is computed on the rounded total income.
+
+[R10] OLD REGIME RATES  (Finance Act 2024, First Schedule)   [V*]
+  Age below 60:      up to 2,50,000 nil; 2,50,001-5,00,000 at 5%; 5,00,001-10,00,000 at 20%; above 10,00,000 at 30%.
+  Age 60 to 79:      up to 3,00,000 nil; 3,00,001-5,00,000 at 5%; 5,00,001-10,00,000 at 20%; above 10,00,000 at 30%.
+  Age 80 or more:    up to 5,00,000 nil; 5,00,001-10,00,000 at 20%; above 10,00,000 at 30%.
+  (*) Old-regime slabs are shown identically on the Income Tax portal for AY 2026-27; no change in the Finance Act 2024 old-regime slabs.
+
+[R11] NEW REGIME RATES  (Sec 115BAC(1A)) FY 2024-25   [V]
+  Same for all ages: up to 3,00,000 nil; 3,00,001-7,00,000 at 5%; 7,00,001-10,00,000 at 10%; 10,00,001-12,00,000 at 15%; 12,00,001-15,00,000 at 20%; above 15,00,000 at 30%.
+
+[R12] REBATE UNDER SECTION 87A   [V]
+  Old regime: if total income does not exceed Rs 5,00,000, rebate = lower of tax and Rs 12,500. No marginal relief.
+  New regime: if total income does not exceed Rs 7,00,000, rebate = lower of tax and Rs 25,000.
+  New regime marginal relief: if total income exceeds Rs 7,00,000, the tax payable (before surcharge and cess) cannot exceed the amount by which total income exceeds Rs 7,00,000.
+
+[R13] SURCHARGE   [V]
+  Surcharge is a percentage of the income tax (after rebate), based on total income:
+    above Rs 50,00,000: 10%;  above Rs 1,00,00,000: 15%;  above Rs 2,00,00,000: 25%;  above Rs 5,00,00,000: 37% (old regime only).
+  New regime: the highest surcharge is 25% (no 37% band).
+  MARGINAL RELIEF: tax plus surcharge cannot exceed (tax plus surcharge payable on income equal to the threshold crossed, at the surcharge rate of the band below the threshold) plus (total income minus that threshold).
+
+[R14] HEALTH AND EDUCATION CESS   [V]
+  4% of (income tax after rebate plus surcharge).
+
+[R15] ROUNDING OF TAX  (Sec 288B)   [V]
+  The final amount payable (tax + surcharge + cess) is rounded to the nearest multiple of Rs 10 (5 or more rounds up).
+
+[R16] CHOICE OF REGIME
+  Compute tax under both regimes and recommend the regime with the lower final amount payable. If equal, recommend the new regime.

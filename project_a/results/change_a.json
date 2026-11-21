@@ -1,0 +1,79 @@
+{
+  "n_cases": 238,
+  "n_cases_affected_by_change": 186,
+  "hand_rules": {
+    "no_config_for_new_fy": "loud: ValueError",
+    "config_lines_changed": 26,
+    "code_lines_changed": 0,
+    "partial_update_slabs_only": {
+      "n_cases": 238,
+      "regime_exact": 0.8634453781512605,
+      "case_exact": 0.726890756302521,
+      "loud_errors": 0,
+      "silent_wrong": 65
+    },
+    "partial_update_rebate_only": {
+      "n_cases": 238,
+      "regime_exact": 0.6848739495798319,
+      "case_exact": 0.3697478991596639,
+      "loud_errors": 0,
+      "silent_wrong": 150
+    },
+    "after_update": {
+      "n_cases": 238,
+      "regime_exact": 1.0,
+      "case_exact": 1.0,
+      "loud_errors": 0,
+      "silent_wrong": 0
+    }
+  },
+  "llm_compiled": {
+    "stale_fy2024_rules_used_for_fy2025": {
+      "n_cases": 238,
+      "regime_exact": 0.6092436974789915,
+      "case_exact": 0.2184873949579832,
+      "loud_errors": 0,
+      "silent_wrong": 186
+    },
+    "recompile": {
+      "seconds": 142.1,
+      "model": "Qwen3.5-9B",
+      "tokens_in": 2467,
+      "tokens_out": 5699
+    },
+    "raw_llm_output": {
+      "n_cases": 238,
+      "regime_exact": 0.15384615384615385,
+      "case_exact": 0.004201680672268907,
+      "loud_errors": 225,
+      "silent_wrong": 12
+    },
+    "raw_after_crash_fix_only": "n/a: this draft's crash is not the slab-unpacking one (not a one-line fix)",
+    "reviewed_file_present": true,
+    "after_review": {
+      "n_cases": 238,
+      "regime_exact": 1.0,
+      "case_exact": 1.0,
+      "loud_errors": 0,
+      "silent_wrong": 0
+    }
+  },
+  "llm_query": {
+    "model": "Qwen3.5-9B",
+    "after_update": {
+      "n_cases": 10,
+      "regime_exact": 0.15,
+      "case_exact": 0.1,
+      "loud_errors": 0,
+      "silent_wrong": 9
+    },
+    "stale_prompt_fy2024_rules": {
+      "n_cases": 8,
+      "regime_exact": 0.0625,
+      "case_exact": 0.0,
+      "loud_errors": 0,
+      "silent_wrong": 8
+    },
+    "carried_over_from_earlier_run": true
+  }
+}

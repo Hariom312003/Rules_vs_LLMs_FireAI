@@ -1,0 +1,37 @@
+problem,name,detector,detection_rate,batch_hit_rate,fa_row_rate,fa_batch_rate,cost_per_m_rows_usd,rows_per_s,clarity
+a,Renamed or dropped column,rules,1.0,1.0,0.0,0.0,4.3668518527637285e-07,25444213.55645262,1.0
+b,Column type change,rules,1.0,1.0,0.0,0.0,2.230416666398688e-06,4981630.239094078,1.0
+c,Date format switch partway through batch,rules,1.0,1.0,0.0,0.0,2.7725070370471026e-05,400760.42955494736,1.0
+d,Latitude/longitude swapped,rules,1.0,1.0,0.0,0.0,1.1396757407232548e-05,974936.1782553903,1.0
+e,Exact duplicates,rules,1.0,1.0,0.0,0.0,2.119948500882104e-05,524121.7466597803,0.5
+f,Near-duplicates,rules,1.0,1.0,0.0005,1.0,6.19202522044823e-05,179442.27801944895,1.0
+g,Null spike in one agency's records,rules,1.0,1.0,0.0,0.0,6.381328333325789e-05,174119.09450081966,0.5035128805620609
+h,Closed date earlier than created date,rules,1.0,1.0,0.0,0.0,1.8500646296438895e-05,600579.6193860448,1.0
+i,ZIP inconsistent with borough,rules,1.0,1.0,0.0,0.0,1.9312799999700776e-05,575323.6771096507,1.0
+j,Complaint Type inconsistent with Descriptor,rules,0.9966666666666667,1.0,0.0045,1.0,2.7005325925857605e-05,411441.47423424426,1.0
+k,Resolution Description contradicting Status,rules,1.0,1.0,0.0245,1.0,8.575173518528976e-05,129573.01781826987,1.0
+l,Personal data in free-text fields,rules,1.0,1.0,0.0045,1.0,0.00016354354259259777,67939.77270499714,1.0
+a,Renamed or dropped column,stats,1.0,1.0,0.0,0.0,6.008092595021919e-07,18493575.01633274,1.0
+b,Column type change,stats,1.0,1.0,0.0,0.0,1.9271931481373234e-05,576543.7222444599,1.0
+c,Date format switch partway through batch,stats,1.0,1.0,0.0,0.0,6.675699814814429e-05,166441.14354054394,0.75
+d,Latitude/longitude swapped,stats,1.0,1.0,0.0,0.0,3.652195000014486e-05,304231.0476594771,0.75
+e,Exact duplicates,stats,1.0,1.0,0.0,0.0,2.17258959436047e-05,511422.4582476569,0.25
+f,Near-duplicates,stats,0.87,1.0,0.001,1.0,0.0005140040388006502,21616.777831234926,0.75
+g,Null spike in one agency's records,stats,1.0,1.0,0.0,0.0,0.0002617481277777895,42449.62974689876,0.5035128805620609
+h,Closed date earlier than created date,stats,1.0,1.0,0.0,0.0,1.9513994444272006e-05,569391.9378137665,0.75
+i,ZIP inconsistent with borough,stats,1.0,1.0,0.0,0.0,2.733464259247537e-05,406484.59454047354,0.75
+j,Complaint Type inconsistent with Descriptor,stats,0.9933333333333333,1.0,0.0018333333333333333,1.0,2.9444725925874016e-05,377354.88314895215,0.75
+k,Resolution Description contradicting Status,stats,0.016666666666666666,1.0,0.0006666666666666666,0.6666666666666666,0.0001910520333336973,58157.51299387694,0.75
+l,Personal data in free-text fields,stats,0.0,0.0,0.0,0.0,0.00014269016666659166,77868.79341919345,
+a,Renamed or dropped column,llm,0.5,0.5,0.0,0.0,0.0,3.1344897362408415,0.75
+b,Column type change,llm,0.5,0.5,0.0,0.0,0.0,1.9481344161236998,0.75
+c,Date format switch partway through batch,llm,0.0,1.0,0.0,1.0,0.0,2.1280201652234227,0.75
+d,Latitude/longitude swapped,llm,0.7,1.0,0.0,0.0,0.0,3.5082359513865082,0.75
+e,Exact duplicates,llm,0.0625,0.5,0.0,0.0,0.0,2.497868821160502,0.75
+f,Near-duplicates,llm,0.0,0.0,0.0,0.0,0.0,2.651080022466266,
+g,Null spike in one agency's records,llm,0.3333333333333333,1.0,0.02,0.5,0.0,2.6430970216568723,0.75
+h,Closed date earlier than created date,llm,0.65,1.0,0.01,1.0,0.0,3.4997094199994176,0.75
+i,ZIP inconsistent with borough,llm,0.1,1.0,0.0,0.0,0.0,2.608637865172592,0.75
+j,Complaint Type inconsistent with Descriptor,llm,0.1,1.0,0.005,0.5,0.0,2.198851518741193,0.75
+k,Resolution Description contradicting Status,llm,0.35,1.0,0.0,0.0,0.0,3.5750345300112185,0.75
+l,Personal data in free-text fields,llm,0.3,1.0,0.0,0.0,0.0,6.278073957592126,0.75

@@ -1,0 +1,50 @@
+{"id": "d01", "style": "plain", "text": "I'm 32 and earn 18 lakh a year. No investments.", "expected": {"age": 32, "gross_salary": 1800000}, "clarify": []}
+{"id": "d02", "style": "plain", "text": "Salary 12,00,000 per annum, age 28, I put 1.5 lakh in PPF and ELSS.", "expected": {"age": 28, "gross_salary": 1200000, "sec_80c": 150000}, "clarify": []}
+{"id": "d03", "style": "hinglish", "text": "Meri age 35 saal hai, salary 25 lakh per year hai. 80C mein 1.5 lakh invest kiya hai aur NPS mein 50 hazaar.", "expected": {"age": 35, "gross_salary": 2500000, "sec_80c": 150000, "sec_80ccd_1b": 50000}, "clarify": []}
+{"id": "d04", "style": "hinglish", "text": "Mera salary 80,000 rupaye mahina hai, umar 26.", "expected": {"age": 26, "gross_salary": 960000}, "clarify": []}
+{"id": "d05", "style": "detailed", "text": "Age 45. Annual gross salary is Rs 30,00,000. Basic is 12 lakh, HRA received 6 lakh, I pay rent 20,000 per month in Mumbai.", "expected": {"age": 45, "gross_salary": 3000000, "basic_salary": 1200000, "hra_received": 600000, "rent_paid": 240000, "metro_city": true}, "clarify": []}
+{"id": "d06", "style": "casual", "text": "turning 61 this year, salary 9.5 lakh a year. mediclaim premium 40k for me", "expected": {"age": 61, "gross_salary": 950000, "sec_80d_self": 40000}, "clarify": []}
+{"id": "d07", "style": "detailed", "text": "I am 58, salary 22L per year, my parents (both 75) have mediclaim, I pay 45,000 for it.", "expected": {"age": 58, "gross_salary": 2200000, "sec_80d_parents": 45000, "parents_senior": true}, "clarify": []}
+{"id": "d08", "style": "plain", "text": "Home loan interest Rs 1.8 lakh, I am 40, annual salary 16 lakh.", "expected": {"age": 40, "gross_salary": 1600000, "home_loan_interest": 180000}, "clarify": []}
+{"id": "d09", "style": "detailed", "text": "Salary 50 lakh, age 38, 80C maxed at 1.5 lakh, NPS 50k extra, health insurance 25k for self and 30k for parents (not senior).", "expected": {"age": 38, "gross_salary": 5000000, "sec_80c": 150000, "sec_80ccd_1b": 50000, "sec_80d_self": 25000, "sec_80d_parents": 30000}, "clarify": []}
+{"id": "d10", "style": "terse", "text": "29M, 9.6L pa, nothing else", "expected": {"age": 29, "gross_salary": 960000}, "clarify": []}
+{"id": "d11", "style": "hinglish", "text": "bhai mera CTC nahi, gross salary 14 lakh hai saalana, 31 saal ka hoon, Delhi mein rehta hoon, basic 5.6 lakh, HRA 2.8 lakh milta hai, kiraya 25000 mahina", "expected": {"age": 31, "gross_salary": 1400000, "basic_salary": 560000, "hra_received": 280000, "rent_paid": 300000, "metro_city": true}, "clarify": []}
+{"id": "d12", "style": "terse", "text": "I'm 50, make 1 crore per year.", "expected": {"age": 50, "gross_salary": 10000000}, "clarify": []}
+{"id": "d13", "style": "symbols", "text": "Annual salary is ₹6,50,000, I am 24 years old.", "expected": {"age": 24, "gross_salary": 650000}, "clarify": []}
+{"id": "d14", "style": "detailed", "text": "Age: 36. Gross: 21,60,000/yr. Rent 30k/month in Bengaluru, HRA 4.2 lakh, basic 8.64 lakh.", "expected": {"age": 36, "gross_salary": 2160000, "basic_salary": 864000, "hra_received": 420000, "rent_paid": 360000, "metro_city": false}, "clarify": []}
+{"id": "d15", "style": "formal", "text": "I am sixty-three years old, a retired consultant; salary income 11 lakh; 80D premium 52000 for myself.", "expected": {"age": 63, "gross_salary": 1100000, "sec_80d_self": 52000}, "clarify": []}
+{"id": "d16", "style": "casual", "text": "I'm 27 and I earn 75k per month, I invest 12,500 per month in ELSS.", "expected": {"age": 27, "gross_salary": 900000, "sec_80c": 150000}, "clarify": []}
+{"id": "d17", "style": "hinglish", "text": "Age 42, salary 33 lakh, home loan ka byaaj 2.4 lakh hai, aur 80C mein 1 lakh.", "expected": {"age": 42, "gross_salary": 3300000, "home_loan_interest": 240000, "sec_80c": 100000}, "clarify": []}
+{"id": "d18", "style": "plain", "text": "Gross annual pay of 8 lakh rupees; I'm 55; my employer gives HRA but I live in my own house so I pay no rent.", "expected": {"age": 55, "gross_salary": 800000}, "clarify": []}
+{"id": "d19", "style": "hinglish", "text": "Meri umar 45 hai, income 17.5 lakh saalana. Parents 70 saal ke hain, unka health insurance premium 48000 main bharta hoon.", "expected": {"age": 45, "gross_salary": 1750000, "sec_80d_parents": 48000, "parents_senior": true}, "clarify": []}
+{"id": "d20", "style": "terse", "text": "34 yrs, 24 LPA fixed gross. Zero deductions.", "expected": {"age": 34, "gross_salary": 2400000}, "clarify": []}
+{"id": "d21", "style": "plain", "text": "At 66, my salary (from re-employment) is 15 lakh a year. NPS 50000.", "expected": {"age": 66, "gross_salary": 1500000, "sec_80ccd_1b": 50000}, "clarify": []}
+{"id": "d22", "style": "detailed", "text": "Age 47, 1.2 crore a year gross. I claim 80C 1.5 lakh, NPS 50k, 80D 25k for myself, home loan interest 2 lakh.", "expected": {"age": 47, "gross_salary": 12000000, "sec_80c": 150000, "sec_80ccd_1b": 50000, "sec_80d_self": 25000, "home_loan_interest": 200000}, "clarify": []}
+{"id": "d23", "style": "plain", "text": "Rs 40,000 monthly salary, 23 years old fresher, no investments.", "expected": {"age": 23, "gross_salary": 480000}, "clarify": []}
+{"id": "d24", "style": "terse", "text": "82 years old, salary 7 lakh per annum.", "expected": {"age": 82, "gross_salary": 700000}, "clarify": []}
+{"id": "d25", "style": "hindi_script", "text": "मेरी उम्र 33 साल है और सालाना वेतन 18 लाख रुपये है।", "expected": {"age": 33, "gross_salary": 1800000}, "clarify": []}
+{"id": "d26", "style": "detailed", "text": "Age 30. My CTC is 20 lakh but my gross salary is 18 lakh per year.", "expected": {"age": 30, "gross_salary": 1800000}, "clarify": []}
+{"id": "d27", "style": "plain", "text": "Salary 10 lakh a year, 41 years, paid 1,50,000 life insurance premium and 50,000 into PPF.", "expected": {"age": 41, "gross_salary": 1000000, "sec_80c": 200000}, "clarify": []}
+{"id": "d28", "style": "detailed", "text": "29 yrs, salary 13.2 lakh/annum, rent 18000 pm in Chennai, HRA component 2.64 lakh, basic 5.28 lakh.", "expected": {"age": 29, "gross_salary": 1320000, "basic_salary": 528000, "hra_received": 264000, "rent_paid": 216000, "metro_city": true}, "clarify": []}
+{"id": "d29", "style": "incomplete", "text": "I earn 15 lakh.", "expected": null, "clarify": ["age"]}
+{"id": "d30", "style": "incomplete", "text": "I am 35 years old.", "expected": null, "clarify": ["gross_salary"]}
+{"id": "d31", "style": "hinglish", "text": "Mera salary achha hai, 30 saal ka hoon.", "expected": null, "clarify": ["gross_salary"]}
+{"id": "d32", "style": "ambiguous", "text": "My CTC is 24 lakh, I'm 30.", "expected": null, "clarify": ["gross_salary_basis"]}
+{"id": "d33", "style": "ambiguous", "text": "My take-home is 90,000 per month; age 33.", "expected": null, "clarify": ["gross_salary_basis"]}
+{"id": "d34", "style": "incomplete", "text": "I'm 28 and paying rent of 25,000 a month; salary 18 lakh.", "expected": null, "clarify": ["basic_salary", "hra_received", "metro_city"]}
+{"id": "d35", "style": "incomplete", "text": "Age 40, salary 20 lakh, I live in a rented flat in Pune, HRA is part of my pay.", "expected": null, "clarify": ["basic_salary", "hra_received", "rent_paid"]}
+{"id": "d36", "style": "incomplete", "text": "I'm 31, 16 lakh salary, I have a home loan.", "expected": null, "clarify": ["home_loan_interest"]}
+{"id": "d37", "style": "incomplete", "text": "Age 50, salary 28 lakh, I pay health insurance for my parents.", "expected": null, "clarify": ["sec_80d_parents", "parents_senior"]}
+{"id": "d38", "style": "contradictory", "text": "Age 34. Actually I am 52. Salary 19 lakh.", "expected": null, "clarify": ["age"]}
+{"id": "d39", "style": "contradictory", "text": "Salary is 12 lakh per year, no wait, 15 lakh per year. Age 38.", "expected": null, "clarify": ["gross_salary"]}
+{"id": "d40", "style": "contradictory", "text": "I'm 45, I make 20 lakh annually and 1.5 lakh per month.", "expected": null, "clarify": ["gross_salary"]}
+{"id": "d41", "style": "ambiguous", "text": "I'm a senior citizen, salary 10 lakh.", "expected": null, "clarify": ["age"]}
+{"id": "d42", "style": "vague", "text": "Young, about 25ish, salary maybe 8-10 lakh.", "expected": null, "clarify": ["gross_salary"]}
+{"id": "d43", "style": "incomplete", "text": "Rent 30,000 per month in Delhi, age 33, salary 24 lakh, basic is 40% of salary.", "expected": null, "clarify": ["hra_received"]}
+{"id": "d44", "style": "ambiguous", "text": "I earn 90000, age 37.", "expected": null, "clarify": ["gross_salary_period"]}
+{"id": "d45", "style": "hinglish", "text": "Meri age 44 hai, salary 22 lakh hai, aur mera ghar kiraye ka hai.", "expected": null, "clarify": ["basic_salary", "hra_received", "rent_paid", "metro_city"]}
+{"id": "d46", "style": "ambiguous", "text": "I'm 36 and got a 12 lakh salary plus a 3 lakh bonus. Is the bonus included in the salary?", "expected": null, "clarify": ["gross_salary_basis"]}
+{"id": "d47", "style": "incomplete", "text": "Salary 18 lakh. I invest in NPS.", "expected": null, "clarify": ["age", "sec_80ccd_1b"]}
+{"id": "d48", "style": "contradictory", "text": "Age 55. Salary 14 lakh. 80C investments 2 lakh in ELSS, and I am under 40.", "expected": null, "clarify": ["age"]}
+{"id": "d49", "style": "incomplete", "text": "I'm 39, salary 16 lakh, 80D premium paid but I don't remember the amount.", "expected": null, "clarify": ["sec_80d_self"]}
+{"id": "d50", "style": "hinglish", "text": "Mujhe nahi pata mera salary kitna hai, 29 saal ka hoon.", "expected": null, "clarify": ["gross_salary"]}
