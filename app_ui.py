@@ -25,7 +25,17 @@ from project_a.tax_engine.hand_rules.calculator import HandRulesCalculator
 from project_a.tax_engine.models import TaxpayerInput
 from project_b.detectors.rules import RuleDetectors
 
-API_BASE = os.getenv("API_BASE_URL", "http://127.0.0.1:8000")
+def get_default_api_base() -> str:
+    """Retrieve API base URL from Streamlit secrets, environment variables, or local default."""
+    try:
+        if hasattr(st, "secrets") and "API_BASE_URL" in st.secrets:
+            return str(st.secrets["API_BASE_URL"]).rstrip("/")
+    except Exception:
+        pass
+    env_val = os.getenv("API_BASE_URL")
+    if env_val:
+        return env_val.rstrip("/")
+    return "http://127.0.0.1:8000"
 
 st.set_page_config(
     page_title="Rules vs LLMs | Fire AI",
@@ -67,24 +77,35 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Check backend health
-backend_online = False
-backend_info = {}
-try:
-    h_resp = requests.get(f"{API_BASE}/api/health", timeout=1.5)
-    if h_resp.status_code == 200:
-        backend_online = True
-        backend_info = h_resp.json()
-except Exception:
-    backend_online = False
-
+# Sidebar: Environment & Backend Configuration
 with st.sidebar:
     st.markdown("### 🔌 System Architecture")
+    default_base = get_default_api_base()
+    
+    with st.expander("⚙️ Backend API Endpoint", expanded=False):
+        api_input = st.text_input("FastAPI Base URL:", value=default_base, key="api_base_override")
+        st.caption("Change this to your hosted Render URL (e.g. `https://your-service.onrender.com`)")
+
+    API_BASE = st.session_state.get("api_base_override", default_base).rstrip("/")
+
+    # Check backend health
+    backend_online = False
+    backend_info = {}
+    try:
+        h_resp = requests.get(f"{API_BASE}/api/health", timeout=3.0)
+        if h_resp.status_code == 200:
+            backend_online = True
+            backend_info = h_resp.json()
+    except Exception:
+        backend_online = False
+
     if backend_online:
         st.success(f"🟢 **FastAPI Connected**\n`{API_BASE}`")
         st.caption(f"**Model:** `{backend_info.get('active_model', 'gemini-3.5-flash')}`")
     else:
-        st.warning(f"🟡 **Direct Engine Mode**\nFastAPI offline at `{API_BASE}`. Calling local modules.")
+        st.warning(f"🟡 **Direct Engine Mode**\nBackend unreachable at `{API_BASE}`. Using in-process rules engine.")
+        if "onrender.com" in API_BASE:
+            st.info("ℹ️ **Render Free Tier Cold-Start:** Render web services spin down after 15m. Please allow 30–50s for the first request to wake the server.")
     
     st.markdown("---")
     st.markdown("### 📚 Evaluation Scope")

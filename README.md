@@ -67,7 +67,9 @@ rules-vs-llms-assignment/
 ├── README.md                   # This master documentation
 ├── run_all.py                  # Single command that reproduces every reported number
 ├── app_api.py                  # FastAPI REST endpoints
-└── app_ui.py                   # Streamlit web UI for interactive testing
+├── app_ui.py                   # Streamlit web UI for interactive testing
+├── render.yaml                 # Render Blueprint deployment specification
+└── test_web_full.py            # End-to-end integration test suite
 ```
 
 ---
@@ -102,3 +104,63 @@ Be prepared to answer these core architectural questions during the 60-minute in
    *Empirically measured: letting the LLM overrule rule/stat alerts dropped detection from 0.99 to 0.08 on Complaint vs Descriptor (dropping 146/150 true alerts) and slowed throughput from 6,800 to 44 rows/s.*
 3. **How do you keep the system correct through the next Budget?**  
    *Derive thresholds into YAML, independently update `oracle.py`, generate boundary tests (+/-10 around every slab edge/rebate limit), and enforce a gate against the official Income Tax Dept calculator.*
+
+---
+
+## 5. Cloud Deployment Architecture
+
+```
+                               ┌────────────────────────────────┐
+                               │     USER WEB BROWSER           │
+                               └──────────────┬─────────────────┘
+                                              │ HTTPS
+                                              ▼
+                        ┌──────────────────────────────────────────────┐
+                        │        Streamlit Community Cloud             │
+                        │       (Frontend UI: app_ui.py)               │
+                        └─────────────────────┬────────────────────────┘
+                                              │ HTTPS (JSON API)
+                                              ▼
+                        ┌──────────────────────────────────────────────┐
+                        │              Render.com                      │
+                        │      (FastAPI Backend: app_api.py)           │
+                        └──────────────┬────────────────┬──────────────┘
+                                       │                │
+                        ┌──────────────▼──────┐  ┌──────▼──────────────┐
+                        │ Deterministic Rules │  │ Google Gemini API   │
+                        │  (0.1ms Arithmetic) │  │ (NL Parser Only)    │
+                        └─────────────────────┘  └─────────────────────┘
+```
+
+### A. Deploy FastAPI Backend on Render
+1. Sign in to [Render.com](https://dashboard.render.com).
+2. Click **New +** $\to$ **Web Service**.
+3. Connect your GitHub repository (`Hariom312003/Rules_vs_LLMs_FireAI`).
+4. Configure settings:
+   - **Name:** `fireai-tax-backend`
+   - **Environment:** `Python 3`
+   - **Region:** `Oregon (US West)` or any desired region.
+   - **Branch:** `main`
+   - **Build Command:** `pip install --upgrade pip && pip install -r requirements.txt`
+   - **Start Command:** `uvicorn app_api:app --host 0.0.0.0 --port $PORT`
+   - **Health Check Path:** `/api/health`
+5. Add Environment Variables under the **Environment** tab:
+   - `GEMINI_API_KEY`: *(Your private Google AI Studio API key)*
+   - `GEMINI_MODEL`: `gemini-3.5-flash`
+   - `LLM_CACHE`: `1`
+   - `LLM_BACKEND`: `gemini`
+   - `PYTHON_VERSION`: `3.11.9`
+6. Click **Deploy Web Service**. Once deployed, copy your service URL (e.g., `https://fireai-tax-backend.onrender.com`).
+
+### B. Deploy Frontend on Streamlit Community Cloud
+1. Sign in to [share.streamlit.io](https://share.streamlit.io).
+2. Click **New app**.
+3. Select your repository: `Hariom312003/Rules_vs_LLMs_FireAI`.
+4. Branch: `main`
+5. Main file path: `app_ui.py`
+6. Click **Advanced settings...** and add secrets under **Secrets**:
+   ```toml
+   API_BASE_URL = "https://fireai-tax-backend.onrender.com"
+   ```
+7. Click **Deploy!**
+8. Your interactive AI Tax Advisor is now live and publicly accessible. Users can also enter a custom backend URL dynamically in the sidebar expander.
