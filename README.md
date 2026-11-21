@@ -1,17 +1,28 @@
 # Rules vs LLMs Take-Home Assignment — Fire AI
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://rulesvsllmsfireai-gqprhxfz4xvxyavqdmwryz.streamlit.app/)
+[![FastAPI Backend](https://img.shields.io/badge/FastAPI-Backend_Live-009688?style=flat&logo=fastapi)](https://rules-vs-llms-fireai.onrender.com/docs)
+[![Python 3.11+](https://img.shields.io/badge/Python-3.11%20%7C%203.12-3776AB?style=flat&logo=python)](https://github.com/Hariom312003/Rules_vs_LLMs_FireAI)
+[![Tests Passing](https://img.shields.io/badge/Tests-773%20Passed-brightgreen)](https://github.com/Hariom312003/Rules_vs_LLMs_FireAI)
+
 **Candidate Submission** | **Evaluator:** Kaustubh Keshav, Fire AI  
 **Assignment Thesis:** Deciding when a deterministic rule is the right tool, when an LLM earns its cost, and when the answer is a combination of both.
 
 ---
 
-## 🌐 Live Cloud Deployment (One-Click Evaluation)
+## 🌟 Live Interactive Web Demo (Try It in Your Browser!)
 
-- 🚀 **Interactive Streamlit Web App:** [https://rulesvsllmsfireai-gqprhxfz4xvxyavqdmwryz.streamlit.app/](https://rulesvsllmsfireai-gqprhxfz4xvxyavqdmwryz.streamlit.app/)
-- ⚡ **Production Hosted FastAPI Backend:** [https://rules-vs-llms-fireai.onrender.com/docs](https://rules-vs-llms-fireai.onrender.com/docs)
-- 📦 **GitHub Repository:** [https://github.com/Hariom312003/Rules_vs_LLMs_FireAI](https://github.com/Hariom312003/Rules_vs_LLMs_FireAI)
-
-> **Evaluator Note:** The public Streamlit application is live and fully connected to the hosted FastAPI backend on Render with Google Gemini 3.5 Flash and rupee-exact deterministic calculation. You can test natural language queries in English, Hinglish, or Hindi directly in your browser without local installation.
+> ### 🚀 **[Click Here to Launch the Live Web App](https://rulesvsllmsfireai-gqprhxfz4xvxyavqdmwryz.streamlit.app/)**
+> **Zero installation required.** Anyone can test the complete AI Tax Advisor and Data Quality Firewall online right now:
+>
+> - 📱 **Public Streamlit Application:** **[https://rulesvsllmsfireai-gqprhxfz4xvxyavqdmwryz.streamlit.app/](https://rulesvsllmsfireai-gqprhxfz4xvxyavqdmwryz.streamlit.app/)**
+> - ⚡ **Production Hosted FastAPI Backend:** **[https://rules-vs-llms-fireai.onrender.com/docs](https://rules-vs-llms-fireai.onrender.com/docs)**
+> - 📦 **GitHub Repository:** **[https://github.com/Hariom312003/Rules_vs_LLMs_FireAI](https://github.com/Hariom312003/Rules_vs_LLMs_FireAI)**
+>
+> 💡 **What you can try right now in the web app:**
+> 1. **Ask in Plain Language, Hinglish, or Hindi:** Type *"Meri annual salary 14 lakh hai, Mumbai me rehta hu, rent 30000 per month, 80C 1.5 lakh"*. Google Gemini extracts the structured financial profile, hands off to the deterministic engine, and computes rupee-exact tax savings with a full statutory clause audit trace!
+> 2. **Interactive What-If Tax Calculator:** Test custom salary, HRA, 80C, 80D, and NPS scenarios in 0.1ms with instantaneous feedback across FY 2024-25 and FY 2025-26.
+> 3. **Data Quality Guardrail Tester (Project B):** Test NYC 311 service request records for PII leaks, status contradictions, and all 12 corruption types.
 
 ---
 
